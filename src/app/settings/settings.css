@@ -1,0 +1,93 @@
+.settings-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.settings-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.highlight { color: #4ecca3; }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.settings-section h3 {
+  margin-bottom: 20px;
+  color: #4ecca3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.setting-item h4 { margin: 0; font-size: 1.1rem; }
+.setting-item p { margin: 5px 0 0; font-size: 0.85rem; color: #aaa; }
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+/* Styled Checkbox as Toggle Switch */
+input[type="checkbox"] {
+  width: 50px;
+  height: 25px;
+  appearance: none;
+  background: #333;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked { background: #4ecca3; }
+
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked::before { left: 27px; }
+
+.save-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  background: transparent;
+  border: 2px solid #4ecca3;
+  color: #4ecca3;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #4ecca3;
+  color: #1a1a2e;
+}

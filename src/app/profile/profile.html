@@ -1,0 +1,62 @@
+<div class="profile-container" *ngIf="userData">
+ 
+  <div class="bg-blur-circle"></div>
+
+  <div class="profile-card-wrapper">
+    
+    <nav class="profile-header-nav">
+      <button class="icon-btn-back" [routerLink]="['/home']" title="Go Home">
+        <span class="arrow">←</span> <span>Home</span>
+      </button>
+      <h2 class="page-title">My Profile</h2>
+      <button class="logout-btn-nav" (click)="logout()">Logout</button>
+    </nav>
+
+    <main class="profile-main-content">
+      
+      <section>
+        
+        <div class="banner-gradient"></div>
+        <div class="user-avatar-area">
+          <div class="avatar-frame">
+          
+            <img [src]="'https://ui-avatars.com' + userData.username + '&background=6366f1&color=fff&size=128'" 
+                 alt="User Avatar" class="avatar-img">
+            <span class="online-status"></span>
+          </div>
+          <div class="user-meta">
+            <h1 class="display-name">{{ userData.username }}</h1>
+            <p class="user-role">Member since March 2026</p>
+            <div class="badge-row">
+              <span class="badge">Explorer</span>
+              <span class="badge premium">Pro</span>
+            </div>
+          </div>
+        </div>
+      </section> 
+      
+      <div class="details-grid">
+       
+        <div class="data-card">
+          <div class="card-title">
+            <span class="icon">👤</span>
+            <h3>Account Details</h3>
+          </div>
+          <div class="info-list">
+            <div class="info-item">
+              <label>Username</label>
+              <div class="value-box">{{ userData.username }}</div>
+            </div>
+            <div class="info-item">
+              <label>Email Address</label>
+              <div class="value-box">{{ userData.email || 'no-email@provided.com' }}</div>
+            </div>
+            <div class="info-item">
+              <label>Current Status</label>
+              <div class="value-box status-active">Active</div>
+            </div>
+          </div>
+        </div>
+
+
+     

@@ -1,0 +1,108 @@
+
+html, body {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+.hero {
+  height: 100vh !important;
+  width: 100% !important;
+  
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url("https://t4.ftcdn.net/jpg/02/94/29/33/360_F_294293388_rMi36DO4isvXoNh8B3Q5G07X0bL9z1Ng.jpg") no-repeat center center !important;
+  
+  background-size: cover !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+
+.bg, .hero::before {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+
+.nav {
+  position: absolute !important;
+  top: 30px !important;
+  right: 50px !important;
+  z-index: 100 !important;
+}
+
+.nav button {
+  margin-left: 15px;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.signin {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.signup {
+  background: #7e6fff !important;
+  color: white !important;
+}
+
+
+.hero-content {
+  position: relative !important;
+  z-index: 50 !important;
+  color: white !important;
+  max-width: 700px;
+  margin-left: 8% !important;
+}
+
+h1 {
+  font-size: 72px !important;
+  font-weight: 800 !important;
+  margin-bottom: 20px !important;
+  text-shadow: 2px 4px 15px rgba(0,0,0,0.6) !important;
+}
+
+.description {
+  line-height: 1.8 !important;
+  font-size: 20px !important;
+  margin-bottom: 40px !important;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5) !important;
+}
+
+
+.buttons button {
+  padding: 15px 35px;
+  margin-right: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.play {
+  background: #7e6fff !important;
+  color: white !important;
+  border: none !important;
+}
+
+.learn {
+  background: transparent !important;
+  border: 2px solid white !important;
+  color: white !important;
+}
+
+
+.play:hover, .signup:hover { background: #6a5ae0 !important; }
+.learn:hover, .signin:hover { background: white !important; color: #1a1a1a !important; }

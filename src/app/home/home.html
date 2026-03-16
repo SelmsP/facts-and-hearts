@@ -1,0 +1,55 @@
+<div class="home-wrapper">
+  
+  <nav class="main-navbar">
+    <div class="nav-logo">Insight<span>Hub</span></div>
+    <div class="nav-links">
+      <a [routerLink]="['/profile']" class="nav-link">
+        <span class="nav-icon">👤</span> Profile
+      </a>
+      <a [routerLink]="['/about']" class="nav-link">
+        <span class="nav-icon">ℹ️</span> About Us
+      </a>
+      <a [routerLink]="['/contact']" class="nav-link">
+        <span class="nav-icon">📞</span> Contact
+      </a>
+      <a [routerLink]="['/settings']" class="nav-link">
+        <span class="nav-icon">⚙️</span> Settings
+      </a>
+    </div>
+  </nav>
+
+  <main class="content-area">
+   
+    <header class="hero-section">
+      <h1>Welcome back, <span class="highlight">Explorer</span></h1>
+      <p class="subtitle">Choose your preferred experience to get started.</p>
+    </header>
+
+    
+    <div class="mode-container">
+     
+      <button class="premium-card trivia" [routerLink]="['/categories']" [queryParams]="{ mode: 'trivia' }">
+        <div class="card-inner">
+          <span class="mode-icon">🔮</span>
+          <div class="text-content">
+            <h2>Trivia Quiz</h2>
+            <p>Challenge your mind with curated questions from various categories.</p>
+          </div>
+          <div class="arrow-icon">→</div>
+        </div>
+      </button>
+
+    
+      <button class="premium-card heartfelt" [routerLink]="['/heartfelt']">
+        <div class="card-inner">
+          <span class="mode-icon">❤️</span>
+          <div class="text-content">
+            <h2>Heartfelt Questions</h2>
+            <p>Dive deep into meaningful conversations and personal reflections.</p>
+          </div>
+          <div class="arrow-icon">→</div>
+        </div>
+      </button>
+    </div>
+  </main>
+</div>

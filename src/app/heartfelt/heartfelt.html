@@ -1,0 +1,45 @@
+<div class="heartfelt-wrapper">
+
+ 
+  <div *ngIf="showWelcome" class="screen-container welcome-screen">
+    <div class="welcome-box">
+      <span class="big-heart">❤️</span>
+      <h1>Welcome to your daily questions</h1>
+      <p>Take a deep breath and let's explore these meaningful questions together.</p>
+      
+      <button class="main-btn" (click)="startExploring()" [disabled]="isLoading">
+        {{ isLoading ? 'Preparing Questions...' : 'Start Now' }}
+      </button>
+      
+      <button class="back-link" routerLink="/home">Maybe later</button>
+    </div>
+  </div>
+
+  
+  <div *ngIf="!showWelcome && !quizFinished && questions.length > 0" class="screen-container">
+    <div class="question-container">
+      <div class="header">
+        <span class="count">Question {{ current + 1 }} of {{ questions.length }}</span>
+      </div>
+
+      <div class="question-box">
+       
+        <h2>"{{ questions[current]?.question }}"</h2>
+      </div>
+
+      <button class="next-btn" (click)="nextQuestion()">
+        {{ current + 1 === questions.length ? 'Finish' : 'Next Question →' }}
+      </button>
+    </div>
+  </div>
+
+ 
+  <div *ngIf="quizFinished" class="screen-container">
+    <div class="welcome-box">
+      <h2>You're all done!</h2>
+      <p>I hope these questions helped you reflect today.</p>
+      <button class="main-btn" routerLink="/home">Back to Home</button>
+    </div>
+  </div>
+
+</div>

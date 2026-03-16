@@ -1,0 +1,43 @@
+
+<div class="quiz-container" *ngIf="questions.length > 0 && currentIndex < questions.length; else loadingOrEnd">
+  
+  <div class="quiz-header">
+    <h2>Question {{ currentIndex + 1 }} / 10</h2>
+    <p>Current Score: {{ score }}</p>
+  </div>
+
+  <div class="question-section">
+
+    <h3 [innerHTML]="questions[currentIndex].question"></h3>
+  </div>
+
+  <div class="answers-grid">
+   
+    <button 
+      *ngFor="let a of questions[currentIndex].incorrect_answers" 
+      (click)="selectAnswer(a)"
+      class="answer-btn"
+      [innerHTML]="a">
+    </button>
+    
+    
+    <button 
+      (click)="selectAnswer(questions[currentIndex].correct_answer)"
+      class="answer-btn"
+      [innerHTML]="questions[currentIndex].correct_answer">
+    </button>
+  </div>
+
+</div>
+
+
+<ng-template #loadingOrEnd>
+  <div class="status-message" *ngIf="questions.length === 0">
+    <p>📡 Fetching questions... please wait.</p>
+  </div>
+  
+  <div class="status-message" *ngIf="questions.length > 0 && currentIndex >= 10">
+    <p>Quiz Finished! Redirecting to score...</p>
+  </div>
+</ng-template>
+

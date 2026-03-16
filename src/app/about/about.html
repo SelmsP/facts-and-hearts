@@ -1,0 +1,68 @@
+<div class="about-wrapper">
+
+  <nav class="main-navbar">
+    <div class="nav-logo" [routerLink]="['/home']" style="cursor: pointer;">Insight<span>Hub</span></div>
+    <div class="nav-links">
+      <a [routerLink]="['/home']" class="nav-link">Home</a>
+      <a [routerLink]="['/profile']" class="nav-link">Profile</a>
+    </div>
+  </nav>
+
+  <main class="about-content">
+   
+    <header class="about-hero">
+      <h1>About <span class="highlight">InsightHub</span></h1>
+      <p class="tagline">Empowering minds through knowledge and connection.</p>
+    </header>
+
+   
+    <section class="mission-grid">
+      <div class="glass-card mission">
+        <span class="icon">🚀</span>
+        <h3>Our Mission</h3>
+        <p>To provide a platform where curiosity meets reflection, helping users grow through trivia and meaningful questions.</p>
+      </div>
+
+      <div class="glass-card vision">
+        <span class="icon">👁️</span>
+        <h3>Our Vision</h3>
+        <p>To become the leading space for digital intellectual exploration and personal emotional discovery.</p>
+      </div>
+    </section>
+
+   
+    <section class="values-section">
+      <h2>Why Choose Us?</h2>
+      <div class="values-list">
+        <div class="value-item">
+          <span class="check">✔</span>
+          <div class="text">
+            <h4>Curated Content</h4>
+            <p>Every trivia question and heartfelt prompt is carefully selected for quality.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="check">✔</span>
+          <div class="text">
+            <h4>Privacy Focused</h4>
+            <p>Your data stays on your device. We value your digital security.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="check">✔</span>
+          <div class="text">
+            <h4>Simple & Clean</h4>
+            <p>A professional interface designed for a distraction-free experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="about-footer">
+      <p>© 2026 InsightHub Project. All rights reserved.</p>
+      <button class="contact-btn" [routerLink]="['/contact']">Get In Touch</button>
+    </footer>
+  </main>
+</div>
+

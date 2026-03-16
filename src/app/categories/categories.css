@@ -1,0 +1,86 @@
+.categories-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.category-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(135deg, #5c7cfa 0%, #9c7af1 100%); 
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.category-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+
+.how-to-play-card {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.how-to-play-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.how-to-play-card ol {
+  color: #555;
+  line-height: 1.8;
+}
